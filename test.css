@@ -1,0 +1,269 @@
+body{
+	position:relative;
+	background-image: url('background.jpg');
+}
+
+#pagewrap {
+	padding: 5px;
+	width: 1260px;
+	margin: 20px auto;
+	background-color: 	#FFFACD;
+}
+
+header {
+	height: 60px;
+	padding: 3px;
+}
+
+#middle{
+	background-color: 	#F0FFFF;
+	font-family:Trebuchet MS; 
+	color: #2F4F4F;
+	width: 616px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+#nav {
+	width: 143px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#sidebar {
+	width: 394px;
+	padding: 5px 15px;
+	float: left;
+}
+
+#nav ,#sidebar{
+	background-color: 	#5F9EA0;
+	min-height: inherit;
+	font-family: Verdana;
+	color: #EEE8AA;
+	font-size: 13px;
+}
+
+header, #nav, #middle, #sidebar {
+	margin-bottom: 5px;
+}
+
+#pagewrap, header, #nav, #middle, #sidebar, footer {
+	border: solid 1px #ccc;
+}
+
+header,footer{
+	background-color: 	#2F4F4F;
+	text-align: center;
+	font-family: Comic Sans MS;
+	color: #F0E68C;
+	padding: 5px;
+}
+
+.hideMe{
+    display:none;
+}
+
+.chart{
+	-ms-transform: rotate(270deg); /* IE 9 */
+	-webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+	transform: rotate(270deg);
+	min-height: 530px;
+    min-width: 300px;
+    text-align: center;
+    margin:-95px 0 0 154px;
+}
+
+.wrongGraph,.correctGraph{
+	list-style-type:none;
+	width:20px;
+	border: 1px solid black;
+	display:inline-block;
+	padding: 0 10px;
+	-moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	-webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+	transition: width 2s, height 2s, transform 2s;
+}
+
+.wrongGraph {
+    -webkit-animation-name: wrong; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: wrong;
+    animation-duration: 4s;
+}
+/* Standard syntax */
+@keyframes wrong {
+    from {background-color: #ff0000;}
+    to {background-color: #FF4500;}
+}
+
+.correctGraph {
+    -webkit-animation-name: correct; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: correct;
+    animation-duration: 4s;
+}
+
+/* Standard syntax */
+@keyframes correct {
+    from {background-color: 	#00FF00;}
+    to {background-color: 	#7FFF00;}
+}
+
+.wrongGraph{
+	background-color: #ff0000;
+	height:200px;
+}
+
+.correctGraph{
+	background-color: #00FF00;
+	height:100px;
+   }
+
+input[type="radio"]{
+	display: inline-block;
+	opacity: 0;
+}
+
+li{
+	list-style-type: none;
+	padding: 10px;
+}
+
+button.ripple{
+  position: relative;
+  border: none;
+  display: inline-block;
+  outline:none;
+  cursor: pointer;
+  background: white;
+  border: 1px solid black;
+  color: white;
+  padding: 25px 60px;
+  border-radius: 2px;
+  font-size: 0.8px;
+  top: -4px;
+  left: -14px;
+
+}
+
+.fab{
+  border-radius: 50%;
+  margin:0;
+  padding: 20px;
+}
+
+.material{
+  position:relative;
+  color:pink;
+  margin: 20px auto;
+  height:400px;
+  width:500px;
+  background:#f45673;
+}
+
+.ripple{
+  overflow:hidden;
+}
+.ripple-effect{
+  position: absolute;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #7CFC00;   
+  animation: ripple-animation 2s;
+}
+@keyframes ripple-animation {
+    from {
+      transform: scale(1);
+      opacity: 0.4;
+    }
+    to {
+      transform: scale(100);
+      opacity: 0;
+    }
+}
+
+.button{
+	font-family: Geneva;
+    border-radius: 13px;
+    font-size: 14px;
+    color: #EEE8AA;
+    width: 111px;
+    height: 34px;
+    background-color: #DEB887;
+    margin: 0 0 0 14px;
+}
+
+ol{
+	margin: 0 0 0 -46px;
+}
+h1{
+	margin: 0;
+}
+h2{
+	text-align: center;
+}
+.question-para{
+	margin: 0 0 0 33px;
+}
+
+footer {
+	clear: both;
+	padding: 0 15px;
+	height: 40px;
+}
+
+
+/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media screen and (max-width: 980px) {	
+	#pagewrap {
+		width: 94%;
+	}
+	#nav {
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+	header, footer {
+		padding: 1% 4%;;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	#nav {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
